@@ -5,7 +5,7 @@ const About = () => (
   <section className="about-section" id="about">
     <div className="about-container">
       <div className="about-image">
-        <img src="/public/close-up-view-modern-business-people.jpg" alt="Наша команда" />
+        <img src="/close-up-view-modern-business-people.jpg" alt="Наша команда" />
       </div>
       <div className="about-content">
         <h2>Про нас</h2>

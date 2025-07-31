@@ -66,8 +66,8 @@ nav.header.navbar.scrolled {
 .header-menu .nav-link {
   color: #fff !important;
   padding: 8px 18px;
+	
   border-radius: 8px;
-  transition: background 0.2s, color 0.2s;
 }
 
 /* .header-menu .nav-link.active,
@@ -86,4 +86,42 @@ nav.header.navbar.scrolled {
   .header-menu .nav-link {
     padding: 6px 10px;
   }
+}
+
+@media (max-width: 900px) {
+  .collapse.navbar-collapse.show .header-menu {
+    background: rgba(22, 31, 30, 0.85); /* darker, more opaque */
+    backdrop-filter: blur(18px) saturate(180%);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    margin-top: 14px;
+    padding: 24px 0 24px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .header-menu .nav-link {
+    font-size: 1.1rem;
+    padding: 14px 18px;
+    border-radius: 12px;
+    margin: 0 12px;
+    text-align: left;
+    background: rgba(255,255,255,0.04);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .header-menu .nav-link.active, .header-menu .nav-link:hover {
+    background: rgba(255,255,255,0.12);
+    color: #1e2a28 !important;
+  }
+}
+
+/* Отключаем анимацию для collapse Bootstrap */
+.collapse,
+.collapse.show,
+.collapsing {
+  transition: none !important;
+  -webkit-transition: none !important;
+  height: auto !important;
 }

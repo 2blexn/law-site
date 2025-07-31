@@ -13,7 +13,7 @@ function Carousel() {
                 </div>
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img src="../../../public/header-img-1.jpg" className="d-block w-100" alt="About"/>
+                        <img src="/header-img-1.jpg" className="d-block w-100" alt="About"/>
                         <div className="carousel-caption-left">
                             <h1>Юридична компанія <strong>ProLex</strong></h1>
                             <p>Ми пропонуємо професійні юридичні послуги, які відповідають вашим потребам та

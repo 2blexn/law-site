@@ -15,7 +15,7 @@ function Header() {
 
     return (
         <nav className={`header navbar navbar-expand-lg navbar-dark-custom${scrolled ? " scrolled" : ""}`}>
-            <div className="container-fluid px-5">
+            <div className="container-fluid">
                 <Link className="navbar-brand header-logo" to="/">ProLex</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
