@@ -1,78 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;700&display=swap");
 
 .carousel-item img {
-    height: 1100px;
-    object-fit: cover;
-    width: 100%;
+  height: 1100px;
+  object-fit: cover;
+  width: 100%;
 }
 
 .carousel-item {
-    position: relative; /* щоб дочірні абсолютні елементи мали прив’язку */
+  position: relative;
 }
 
 .carousel-caption-left {
-    position: absolute;
-    top: 50%;           /* по вертикалі на 50% висоти слайда */
-    left: 12%;           /* зсув від лівого краю (можна 10%, 2rem і т.д.) */
-    transform: translateY(-50%);
-    text-align: left;   /* вирівняти текст по лівому краю */
-    color: #fff;        /* світлий колір тексту */
-    max-width: 40%;     /* обмежуємо ширину блоку */
+  position: absolute;
+  top: 50%;
+  left: 12%;
+  transform: translateY(-50%);
+  text-align: left;
+  color: #fff;
+  max-width: 40%;
+  background: linear-gradient(135deg, rgba(22, 31, 30, 0.85) 0%, rgba(23, 81, 74, 0.75) 100%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: blur(16px) saturate(180%);
+  border-radius: 18px;
+  padding: 32px 28px;
+  box-shadow: 0 8px 32px rgba(22, 31, 30, 0.25), 0 2px 8px rgba(23, 81, 74, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .carousel-caption-left h1 {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: 3.2rem;
   font-weight: 700;
   letter-spacing: 1px;
   color: #fff;
-  text-shadow: 0 4px 24px rgba(23, 81, 74, 0.25), 0 1px 0 #222;
+  text-shadow: 0 4px 24px rgba(22, 31, 30, 0.4), 0 2px 8px rgba(23, 81, 74, 0.2);
   margin-bottom: 18px;
+  line-height: 1.2;
 }
 
 .carousel-caption-left p {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   font-size: 1.35rem;
-  color: #f3f6f5;
+  color: #e3e9e7;
   line-height: 1.7;
   margin-bottom: 32px;
-  text-shadow: 0 2px 8px rgba(23, 81, 74, 0.18);
+  text-shadow: 0 2px 8px rgba(22, 31, 30, 0.3);
 }
 
 .btn-custom {
-		background-color: #2c3e35;
-			color: white;
-			border: 2px solid #2c3e35;
-			padding: 12px 30px;
-			font-size: 16px;
-			font-weight: 600;
-			border-radius: 10px;
-			transition: all 0.3s ease;
-			text-decoration: none;
-			display: inline-block;
-			text-transform: uppercase;
-			letter-spacing: 1px;
-			box-shadow: 0 4px 15px rgba(44, 62, 53, 0.2);
-			margin-top: 20px;
+  background: linear-gradient(135deg, #17514a 0%, #447168 100%);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 6px 20px rgba(22, 31, 30, 0.3), 0 2px 8px rgba(23, 81, 74, 0.2);
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
 }
 
 .btn-custom:hover {
-		background-color: #e7e7e7;
-			color: #2c3e35;
-			border-color: #2c3e35;
-			transform: translateY(-2px);
-			box-shadow: 0 6px 20px rgba(44, 62, 53, 0.3);
-			text-decoration: none;
+  background: linear-gradient(135deg, #234f4a 0%, #447168 100%);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(22, 31, 30, 0.4), 0 4px 12px rgba(23, 81, 74, 0.3);
+  text-decoration: none;
 }
 
 .btn-custom:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 10px rgba(44, 62, 53, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(22, 31, 30, 0.3), 0 2px 6px rgba(23, 81, 74, 0.2);
 }
 
 .carousel {
-    margin-top: 0px !important;
-    padding-top: 0 !important;
+  margin-top: 0px !important;
+  padding-top: 0 !important;
+  touch-action: pan-y pinch-zoom;
 }
 
 @media (max-width: 900px) {
@@ -80,8 +91,49 @@
   .carousel-control-next {
     display: none !important;
   }
+  .carousel-caption-left {
+    left: 10% !important;
+    top: 60% !important;
+    max-width: 96%;
+    padding: 24px 18px;
+    background: linear-gradient(135deg, rgba(22, 31, 30, 0.9) 0%, rgba(23, 81, 74, 0.8) 100%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    backdrop-filter: blur(16px) saturate(180%);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(22, 31, 30, 0.3), 0 2px 8px rgba(23, 81, 74, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .carousel-caption-left h1 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: 1.2px;
+    line-height: 1.3;
+    text-shadow: 0 2px 8px rgba(23, 81, 74, 0.18);
+  }
+  .carousel-caption-left p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    line-height: 1.6;
+    color: #f3f6f5;
+    text-shadow: 0 1px 4px rgba(23, 81, 74, 0.13);
+  }
+  .btn-custom {
+    padding: 14px 28px;
+    font-size: 1.08rem;
+    margin-top: 10px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(44, 62, 53, 0.18);
+  }
 }
-/* --- Responsive styles for Carousel --- */
+
 @media (max-width: 1200px) {
   .carousel-item img {
     height: 700px;
@@ -124,28 +176,64 @@
     height: 896px !important;
   }
   .carousel-caption-left {
-    left: 2%;
-    top: 60%;
-    max-width: 96%;
-    padding: 8px 4px;
-    background: rgba(44, 62, 53, 0.55);
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(23, 81, 74, 0.13);
+    left: 1%;
+    top: 65%;
+    max-width: 98%;
+    padding: 20px 12px;
+    background: linear-gradient(135deg, rgba(22, 31, 30, 0.92) 0%, rgba(23, 81, 74, 0.85) 100%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    backdrop-filter: blur(16px) saturate(180%);
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(22, 31, 30, 0.35), 0 2px 8px rgba(23, 81, 74, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .carousel-caption-left h1 {
-    font-size: 1.1rem;
-    margin-bottom: 6px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: 1.1px;
+    line-height: 1.25;
     text-shadow: 0 2px 8px rgba(23, 81, 74, 0.18);
   }
   .carousel-caption-left p {
-    font-size: 0.85rem;
-    margin-bottom: 10px;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    color: #f3f6f5;
     text-shadow: 0 1px 4px rgba(23, 81, 74, 0.13);
   }
   .btn-custom {
-    padding: 7px 12px;
-    font-size: 12px;
-    margin-top: 6px;
-    border-radius: 7px;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 240px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(44, 62, 53, 0.18);
   }
+}
+
+.carousel-item {
+  transition: transform 0.6s ease-in-out;
+}
+
+.carousel-caption-left {
+  transition: all 0.3s ease-in-out;
+}
+
+.carousel {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.carousel-inner {
+  touch-action: pan-y pinch-zoom;
 }

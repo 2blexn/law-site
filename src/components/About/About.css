@@ -1,10 +1,8 @@
 .about-section {
-  padding: 56px 0 32px 0;
-  margin-bottom: 100px;
-	margin-top: 50px;
+  padding: 56px 0 32px;
+  margin: 50px auto 100px;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  box-sizing: border-box;
 }
 
 .about-container {
@@ -12,23 +10,40 @@
   align-items: center;
   gap: 40px;
   justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
 }
 
 .about-image img {
-  width: 560px;
-  height: 420px;
+	width: 560px;
+	height: 420px;
+  height: auto;
+  aspect-ratio: 4/3;
   object-fit: cover;
   border-radius: 16px;
   box-shadow: 0 2px 12px rgba(23,81,74,0.13);
+  display: block;
 }
 
 .about-content {
-  max-width: 500px;
+  max-width: 540px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-title {
+  order: 0;
+}
+
+.about-image {
+  order: 1;
 }
 
 .about-content h2 {
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: #1a2321;
   margin-bottom: 18px;
@@ -46,7 +61,8 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: 14px;
+  margin-top: 10px;
 }
 
 .about-advantages li {
@@ -57,21 +73,84 @@
   font-weight: 500;
   font-size: 1rem;
   box-shadow: 0 1px 4px rgba(23,81,74,0.07);
+  white-space: nowrap;
 }
 
+/* Tablet styles */
 @media (max-width: 900px) {
   .about-container {
     flex-direction: column;
-    gap: 24px;
+    gap: 28px;
+    padding: 0 16px;
+  }
+  .about-content {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+  }
+  .about-image {
+    order: 2;
+    width: 100%;
+  }
+  .about-title {
+    order: -1;
+    margin-bottom: 18px;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
   }
   .about-image img {
-    width: 180px;
-    height: 220px;
+    width: 320px;
+    max-width: 90vw;
+    height: auto;
+    aspect-ratio: 4/3;
   }
   .about-content h2 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
-} 
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  .about-section {
+    padding: 32px 0 18px 0;
+    margin-bottom: 48px;
+    margin-top: 24px;
+  }
+  .about-container {
+    gap: 18px;
+    padding: 0 6px;
+  }
+  .about-image img {
+    width: 98vw;
+    max-width: 98vw;
+    min-width: 0;
+    height: auto;
+    aspect-ratio: 4/3;
+    border-radius: 10px;
+  }
+  .about-title {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+  .about-content p {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+  .about-advantages {
+    gap: 8px;
+    margin-top: 6px;
+  }
+  .about-advantages li {
+    font-size: 0.95rem;
+    padding: 7px 12px;
+    border-radius: 6px;
+  }
+}
 
 @media (max-width: 900px) {
 	.carousel-item img {

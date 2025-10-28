@@ -4,6 +4,7 @@ import "./Header.css";
 
 function Header() {
     const [scrolled, setScrolled] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -13,14 +14,27 @@ function Header() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const handleMenuToggle = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
         <nav className={`header navbar navbar-expand-lg navbar-dark-custom${scrolled ? " scrolled" : ""}`}>
             <div className="container-fluid">
                 <Link className="navbar-brand header-logo" to="/">ProLex</Link>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
+                <button 
+                    className={`navbar-toggler custom-toggler ${isMenuOpen ? 'open' : ''}`} 
+                    type="button" 
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" 
+                    aria-controls="navbarNavAltMarkup"
+                    aria-expanded={isMenuOpen} 
+                    aria-label="Toggle navigation"
+                    onClick={handleMenuToggle}
+                >
+                    <span className="hamburger-line"></span>
+                    <span className="hamburger-line"></span>
+                    <span className="hamburger-line"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav ms-auto header-menu">

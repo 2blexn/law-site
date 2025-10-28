@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../Header/Header";
 import ContactForm from "./ContactForm";
 import "./ContactForm.css";
 
-const ContactPage = () => (
-  <>
-    <Header />
-    <main className="contact-main contact-main-bg">
-      <section className="contact-card">
+const ContactPage = () => {
+  const [darkHeader, setDarkHeader] = useState(true);
+  
+  useEffect(() => {
+    // Встановлюємо темний хедер для сторінки контактів
+    document.querySelector('nav.header.navbar').classList.add('scrolled');
+    
+    return () => {
+      // Прибираємо клас при розмонтуванні компонента
+      const header = document.querySelector('nav.header.navbar');
+      if (header) header.classList.remove('scrolled');
+    };
+  }, []);
+  
+  return (
+    <>
+      <Header />
+      <main className="contact-main contact-main-bg">
+        <section className="contact-card">
         <div className="contact-card-info">
           <h2>Зв'яжіться з нами</h2>
           <p className="contact-lead">
@@ -26,6 +40,7 @@ const ContactPage = () => (
       </section>
     </main>
   </>
-);
+  );
+}
 
-export default ContactPage; 
+export default ContactPage;

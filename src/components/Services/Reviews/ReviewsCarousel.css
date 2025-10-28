@@ -1,0 +1,223 @@
+/* --- REVIEWS SECTION SPACING --- */
+.reviews-section {
+	border-top: 62px solid #17514a;
+  padding: 64px 0 80px 0;
+  text-align: center;
+  height: auto;
+  margin-bottom: 30px;
+}
+@media (max-width: 900px) {
+  .reviews-section {
+    padding-bottom: 36px;
+    padding-top: 36px;
+  }
+}
+@media (max-width: 600px) {
+  .reviews-section {
+    padding-bottom: 18px;
+    padding-top: 18px;
+  }
+}
+
+/* --- REVIEWS TITLE IMPROVEMENTS --- */
+.reviews-title {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #1a2e2b;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+.reviews-title::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, #17514a 60%, #447168 100%);
+  border-radius: 2px;
+  margin: 14px auto 0 auto;
+  opacity: 0.85;
+}
+@media (max-width: 900px) {
+  .reviews-title {
+    font-size: 1.6rem;
+    margin-top: 36px;
+    margin-bottom: 18px;
+  }
+  .reviews-title::after {
+    width: 32px;
+    height: 2px;
+    margin-top: 8px;
+  }
+}
+@media (max-width: 600px) {
+  .reviews-title {
+    font-size: 1.1rem;
+    margin-top: 18px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  .reviews-title::after {
+    width: 18px;
+    height: 2px;
+    margin-top: 5px;
+  }
+}
+
+/* --- REVIEW CARD TEXT IMPROVEMENTS --- */
+.review-name {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #17514a;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+.review-text {
+  font-family: 'Merriweather', serif;
+  font-size: 1.08rem;
+  color: #234f4a;
+  line-height: 1.7;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0 2px;
+}
+@media (max-width: 900px) {
+  .review-name {
+    font-size: 1.05rem;
+    margin-bottom: 7px;
+  }
+  .review-text {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    padding: 0 1px;
+  }
+}
+@media (max-width: 600px) {
+  .review-name {
+    font-size: 0.98rem;
+    margin-bottom: 5px;
+  }
+  .review-text {
+    font-size: 0.93rem;
+    line-height: 1.5;
+    padding: 0;
+  }
+}
+
+/* --- Додаю стилі для нової каруселі відгуків --- */
+.reviews-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.review-card-slider {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(23, 81, 74, 0.13);
+  padding: 44px 38px 38px 38px;
+  max-width: 420px;
+  min-width: 260px;
+  min-height: 340px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1.5px solid #e3e9e7;
+  transition: box-shadow 0.2s, transform 0.2s;
+  position: relative;
+}
+.review-card-slider:hover {
+  box-shadow: 0 12px 40px rgba(23, 81, 74, 0.18);
+  transform: translateY(-4px) scale(1.03);
+}
+.review-card-center {
+  transform: scale(1.18) translateY(-12px);
+  box-shadow: 0 12px 40px rgba(23, 81, 74, 0.18);
+  opacity: 1;
+  z-index: 2;
+}
+.review-card-side {
+  transform: scale(0.85) translateY(18px);
+  box-shadow: 0 2px 8px rgba(23, 81, 74, 0.10);
+  opacity: 0.7;
+  z-index: 1;
+  pointer-events: none;
+}
+@media (max-width: 900px) {
+  .reviews-carousel {
+    gap: 12px;
+  }
+  .review-card-center {
+    transform: scale(1.05) translateY(-4px);
+  }
+  .review-card-side {
+    transform: scale(0.75) translateY(8px);
+  }
+}
+@media (max-width: 600px) {
+  .reviews-carousel {
+    flex-direction: column;
+    gap: 0;
+  }
+  .review-card-center, .review-card-side {
+    max-width: 95vw;
+    min-width: unset;
+    padding: 12px 4px;
+  }
+  .review-card-center {
+    transform: scale(1) translateY(0);
+  }
+  .review-card-side {
+    display: none;
+  }
+}
+
+/* --- BEAUTIFUL SLIDER ARROWS --- */
+.slider-arrow {
+  background: linear-gradient(135deg, #17514a 60%, #447168 100%);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(23, 81, 74, 0.13);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  outline: none;
+  position: relative;
+}
+.slider-arrow svg {
+  width: 1.5em;
+  height: 1.5em;
+  display: block;
+}
+.slider-arrow:hover {
+  background: linear-gradient(135deg, #234f4a 60%, #447168 100%);
+  box-shadow: 0 8px 24px rgba(23, 81, 74, 0.18);
+  transform: scale(1.08);
+}
+@media (max-width: 900px) {
+  .slider-arrow {
+    display: none !important;
+  }
+}
+@media (max-width: 600px) {
+  .slider-arrow {
+    display: none !important;
+  }
+}
+/* For swipe support, see JS in ReviewsCarousel.jsx */
