@@ -15,12 +15,12 @@ const HighlightBlock = () => {
             <div className="stat-chip sub">юридичних послуг</div>
           </div>
           <div className="stat-item">
-            <div className="stat-num">13</div>
+            <div className="stat-num">23</div>
             <div className="stat-chip">професійних</div>
             <div className="stat-chip sub">юристів та адвокатів</div>
           </div>
           <div className="stat-item">
-            <div className="stat-num">98</div>
+            <div className="stat-num">120</div>
             <div className="stat-chip">постійних</div>
             <div className="stat-chip sub">клієнтів</div>
           </div>

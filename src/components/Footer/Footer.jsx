@@ -23,27 +23,24 @@ const Footer = () => (
       <div className="footer-contacts-row">
         <div className="footer-contact-col">
           <div className="footer-icon">
-            {/* Телефон */}
             <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
               <path fill="#fff" d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/>
             </svg>
           </div>
           <div className="footer-contact-title">Контакти</div>
-          <div className="footer-contact-text">info@youraddress.com<br/>+38 (044) 123-45-67</div>
+          <div className="footer-contact-text">info@prolex.com<br/>+38 (044) 123-45-67</div>
         </div>
         <div className="footer-contact-col">
           <div className="footer-icon">
-            {/* Локація */}
             <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
               <path fill="#fff" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/>
             </svg>
           </div>
           <div className="footer-contact-title">Адреса</div>
-          <div className="footer-contact-text">м. Київ, вул. Юридична 10<br/>Україна</div>
+          <div className="footer-contact-text">Бізнес-центр Парус, вулиця Мечникова, 3-й поверх, 2, Київ<br/>Україна</div>
         </div>
         <div className="footer-contact-col">
           <div className="footer-icon">
-            {/* Годинник */}
             <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
               <path fill="#fff" d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22zm1 11h5v2h-7V6h2v6z"/>
             </svg>
