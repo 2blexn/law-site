@@ -197,7 +197,7 @@
 
 @media (max-width: 900px) {
 	.stats-banner {
-		min-height: 420px;
+		min-height: 620px;
 		padding-bottom: 80px;
 	}
 
@@ -221,7 +221,7 @@
 	}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 400px) {
 	.stats-banner {
 		min-height: auto;
 		align-items: flex-start;

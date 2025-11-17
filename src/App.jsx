@@ -14,7 +14,7 @@ function ScrollToSection() {
       const el = document.getElementById(location.state.scrollTo);
       if (el) {
         setTimeout(() => {
-          const y = el.getBoundingClientRect().top + window.pageYOffset - 80; // 80px offset for header
+          const y = el.getBoundingClientRect().top + window.pageYOffset - 80; 
           window.scrollTo({ top: y, behavior: 'smooth' });
         }, 100);
       }

@@ -1,9 +1,9 @@
 import React from "react";
 import "./Services.css";
-import PhotoCollage from "./PhotoCollage/PhotoCollage";
+import PhotoCollage from "../PhotoCollage/PhotoCollage";
 import FAQAccordion from "../FAQA/FAQAccordion";
 import About from "../About/About";
-import ReviewsCarousel from "./Reviews/ReviewsCarousel";
+import ReviewsCarousel from "../Reviews/ReviewsCarousel";
 import PromoBanner from "../PromoBanner/PromoBanner";
 import HighlightBlock from "../HighlightBlock/HighlightBlock";
 
